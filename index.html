@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Poster Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Create Your Stylish Poster</h1>
+        </div>
+        
+        <div class="form-container">
+            <form id="posterForm">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="customText">Add Custom Text:</label>
+                    <input type="text" id="customText" placeholder="Enter your message" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="photo">Upload Your Photo:</label>
+                    <input type="file" id="photo" accept="image/*" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bgPhoto">Upload Background Image (Optional):</label>
+                    <input type="file" id="bgPhoto" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="background">Choose Background:</label>
+                    <select id="background">
+                        <option value="bg-default">Stylish Default Background</option>
+                        <option value="bg-alt">Vibrant Alternative Background</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="colorSelect">Choose Poster Color:</label>
+                    <select id="colorSelect">
+                        <option value="bg-default">Default Color</option>
+                        <option value="bg-blue">Blue</option>
+                        <option value="bg-green">Green</option>
+                        <option value="bg-red">Red</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="bgFit">Background Fit:</label>
+                    <select id="bgFit">
+                        <option value="cover">Cover</option>
+                        <option value="contain">Contain</option>
+                    </select>
+                </div>
+
+                <div id="sizeSliderContainer" class="form-group">
+                    <label for="sizeSlider">Adjust Poster Size:</label>
+                    <input type="range" id="sizeSlider" min="50" max="150" value="100">
+                </div>
+
+                <div class="form-group">
+                    <label for="textStyle">Choose Text Style:</label>
+                    <select id="textStyle">
+                        <option value="style1">Bold & Shadow</option>
+                        <option value="style2">Elegant & Italic</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="create-btn">Create Poster</button>
+            </form>
+        </div>
+        
+        <div id="posterGallery" class="poster-gallery hidden">
+            <div id="poster1" class="poster hidden"></div>
+            <div id="poster2" class="poster hidden"></div>
+            <div id="poster3" class="poster hidden"></div>
+        </div>
+        
+        <button id="downloadBtn" class="download-btn hidden">Download Poster</button>
+
+        <div class="share-buttons hidden">
+            <h3>Share Your Poster:</h3>
+            <button id="shareFacebook">Share on Facebook</button>
+            <button id="shareInstagram">Share on Instagram</button>
+            <button id="shareWhatsApp">Share on WhatsApp</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
